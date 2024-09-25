@@ -11,6 +11,47 @@ int countRow(FILE* inFile) {
     return count;
 }
 
+int findMin(struct Point* points, int rows) {
+    int index = 0;
+    
+    for (int i = 1; i < rows; i++) { 
+        if (points[i].z < points[index].z) {
+            index = i;
+        }
+    } 
+
+    return index;
+}
+
+int findMax(struct Point* points, int rows) {
+    int index = 0;
+    
+    for (int i = 1; i < rows; i++) { 
+        if (points[i].z > points[index].z) {
+            index = i;
+        }
+    } 
+
+    return index;
+}
+
+double sumHeight(struct Point* points, int rows) {
+    double sum = 0;
+
+    for (int i = 0; i < rows; i++) { 
+        sum = sum + points[i].z;
+    } 
+
+    return sum;
+}
+
+double averageHeight(struct Point* points, int rows) {
+    double sum = sumHeight(points, rows);
+    double average = sum / rows;
+
+    return average;
+}
+
 void stat1(FILE * inFile, struct Point* points, int rows) {
 
     for (int i = 0; i < rows; i++) {
@@ -19,15 +60,19 @@ void stat1(FILE * inFile, struct Point* points, int rows) {
 
         points[i] = p;
     }
-    
-    for (int i = 0; i < rows; i++) {
-        printf("Point %d %.15lf %.15lf %.15lf\n", i, points[i].x, points[i].y, points[i].z);
-    }
+
+    int maxHeight = findMax(points, rows);
+    int minHeight = findMin(points, rows);
+    double average = averageHeight(points, rows);
+
+    printf("The maximum height is: x: %0.15lf, y: %0.15lf, z: %0.15lf\n", points[maxHeight].x, points[maxHeight].y, points[maxHeight].z);
+    printf("The minimum height is: x: %0.15lf, y: %0.15lf, z: %0.15lf\n", points[minHeight].x, points[minHeight].y, points[minHeight].z);
+    printf("The average height of all data points is %0.15lf\n", average);
 }
 
 int main() {
     FILE *fpIn;
-    char* fname = "./data/input.txt";
+    char* fname = "../data/input1.txt";
     fpIn = fopen(fname, "rt");
     if (fpIn == NULL) {
         printf("File %s not found\n", fname);
