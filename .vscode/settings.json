@@ -1,6 +1,14 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "pointcloud.h": "c",
+        "util.h": "c",
+        "bmp.h": "c",
+        "list": "c",
+        "vector": "c",
+        "xhash": "c",
+        "xmemory": "c",
+        "xstring": "c"
     }
 }
