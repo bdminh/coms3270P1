@@ -2,7 +2,7 @@
 
 int main() {
     FILE *stream;
-    char* fname = "./data/test1.xyz";
+    char* fname = "./data/smalltest2.xyz";
     stream = fopen(fname, "rt");
     if (stream == NULL) {
         printf("File %s not found\n", fname);
