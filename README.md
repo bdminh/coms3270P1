@@ -137,11 +137,18 @@ For example:
 
     Institution: Iowa State University
 
-## 🛠️ This submission was developed to fulfill the requirements of `COMS3270P1`, based on the official project specification from the Department of Computer Science, Iowa State University.
+---
 
-# references
-https://www.geeksforgeeks.org/dynamically-growing-array-in-c/
-https://www.hackerearth.com/practice/notes/void-pointer-in-c/
-https://docs.silabs.com/mcu/5.8/efr32bg13/bmp-c
-https://cppcoder.blogspot.com/2007/11/bmp-file-format.html
-https://stackoverflow.com/questions/14279242/read-bitmap-file-into-structure
+## 🛠️ Project Acknowledgement
+
+🧪 This submission was developed to fulfill the requirements of **COMS3270P1**, based on the official project specification from the Department of Computer Science, **Iowa State University**.
+
+---
+
+## 📚 References
+
+- [GeeksForGeeks – Dynamically Growing Array in C](https://www.geeksforgeeks.org/dynamically-growing-array-in-c/)
+- [HackerEarth – Notes on Void Pointer in C](https://www.hackerearth.com/practice/notes/void-pointer-in-c/)
+- [Silabs Docs – BMP File Format](https://docs.silabs.com/mcu/5.8/efr32bg13/bmp-c)
+- [CppCoder Blog – BMP File Structure](https://cppcoder.blogspot.com/2007/11/bmp-file-format.html)
+- [Stack Overflow – Read Bitmap File into Structure](https://stackoverflow.com/questions/14279242/read-bitmap-file-into-structure)
