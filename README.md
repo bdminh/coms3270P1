@@ -35,13 +35,13 @@ This program simulates **water flow and evaporation** over a 2D terrain represen
 ### ⚙️ With `Makefile`
     make
 
-🧹 Clean compiled files 
+### 🧹 Clean compiled files 
     make clean
 
-🏃 How to Run
+### 🏃 How to Run
     ./watershed <ifile> <iter> <iwater> <wcoef> <ecoef> <ofilebase> <seq>
 
-✅ Arguments
+### ✅ Arguments
         Argument	            Description
         <ifile>	                Input point cloud file (.xyz format)
         <iter>	                Number of simulation steps
@@ -55,11 +55,9 @@ This program simulates **water flow and evaporation** over a 2D terrain represen
 
     ./watershed data/test1.xyz 50 10.0 0.05 0.01 out 10
 
-    Simulates 50 steps
-
-    Adds 10.0 units of water initially to each cell
-
-    Saves images: out-0.gif, out-10.gif, ..., out-50.gif
+    - Simulates 50 steps
+    - Adds 10.0 units of water initially to each cell
+    - Saves images: out-0.gif, out-10.gif, ..., out-50.gif
 
 📁 Input Format
 
