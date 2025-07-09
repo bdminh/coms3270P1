@@ -8,13 +8,13 @@ ODIR=obj
 _DEPS = bmp.h util.h pointcloud.h 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = bmp.o util.o pointcloud.o pointcloudio.o display.o
+_OBJ = bmp.o util.o pointcloud.o pointcloudio.o display.o watershed.o
 OBJ = $(patsubst %,$(SRC)/$(ODIR)/%,$(_OBJ))
 
 $(SRC)/$(ODIR)/%.o: $(SRC)/%.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-display: $(OBJ)
+watershed: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 .PHONY: clean

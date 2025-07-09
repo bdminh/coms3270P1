@@ -22,7 +22,7 @@ void *allocateArray(int rows, int columns);
 int listInit(List* l, int max_elmt_size);
 void listAddEnd(List* l, void* elmt);
 void *listGet(List* l, int index);
-List *readPointCloudData(FILE *stream);
+//pointcloud_t* readPointCloudData(FILE *stream);
 
 #endif
 
